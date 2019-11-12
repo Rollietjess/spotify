@@ -1,0 +1,171 @@
+{
+  "playlistCollection": [
+    {
+      "id": "03",
+      "title": "Origins",
+      "imgLink": "https://cdn.glitch.com/c7e5a27f-8d46-4764-af75-5e2964f12d11%2FOrigins_cover.png?v=1569935954430",
+      "duration": "42:10",
+      "songs": [
+        {
+          "id": "01",
+          "title": "Natural",
+          "artist": "Imagine Dragons",
+          "duration": "3:09",
+          "genre": "Indie/Rock"
+        },
+        {
+          "id": "02",
+          "title": "Boomerang",
+          "artist": "Imagine Dragons",
+          "duration": "3:07",
+          "genre": "Indie/Rock"
+        },
+        {
+          "id": "03",
+          "title": "Machine",
+          "artist": "Imagine Dragons",
+          "duration": "3:01",
+          "genre": "Indie/Rock"
+        },
+        {
+          "id": "04",
+          "title": "Cool Out",
+          "artist": "Imagine Dragons",
+          "duration": "3:37",
+          "genre": "Indie/Rock"
+        },
+        {
+          "id": "05",
+          "title": "Bad Liar",
+          "artist": "Imagine Dragons",
+          "duration": "4:20",
+          "genre": "Indie/Rock"
+        },
+        {
+          "id": "06",
+          "title": "West Coast",
+          "artist": "Imagine Dragons",
+          "duration": "3:37",
+          "genre": "Indie/Rock"
+        },
+        {
+          "id": "07",
+          "title": "Zero",
+          "artist": "Imagine Dragons",
+          "duration": "3:30",
+          "genre": "Indie/Rock"
+        },
+        {
+          "id": "08",
+          "title": "Bullet In A Gun",
+          "artist": "Imagine Dragons",
+          "duration": "3:24",
+          "genre": "Indie/Rock"
+        },
+        {
+          "id": "09",
+          "title": "Digital",
+          "artist": "Imagine Dragons",
+          "duration": "3:21",
+          "genre": "Indie/Rock"
+        },
+        {
+          "id": "10",
+          "title": "Only",
+          "artist": "Imagine Dragons",
+          "duration": "3:00",
+          "genre": "Indie/Rock"
+        },
+        {
+          "id": "11",
+          "title": "Stuck",
+          "artist": "Imagine Dragons",
+          "duration": "3:10",
+          "genre": "Indie/Rock"
+        },
+        {
+          "id": "12",
+          "title": "Love",
+          "artist": "Imagine Dragons",
+          "duration": "2:46",
+          "genre": "Indie/Rock"
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Beethoven Sonatas",
+      "duration": "10:05",
+      "songs": [
+        {
+          "id": "01",
+          "title": "Piano Sonata No. 3",
+          "artist": "Beethoven",
+          "duration": "0:00",
+          "genre": "Classical"
+        },
+        {
+          "id": "02",
+          "title": "Piano Sonata No. 7",
+          "artist": "Beethoven",
+          "duration": "0:00",
+          "genre": "Classical"
+        },
+        {
+          "id": "03",
+          "title": "Piano Sonata No. 10",
+          "artist": "Beethoven",
+          "duration": "0:00",
+          "genre": "Classical"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Beethoven Concertos",
+      "duration": "14:43",
+      "songs": [
+        {
+          "id": "01",
+          "title": "Piano Concerto No. 0",
+          "artist": "Beethoven",
+          "duration": "0:00",
+          "genre": "Classical"
+        },
+        {
+          "id": "02",
+          "title": "Piano Concerto No. 4",
+          "artist": "Beethoven",
+          "duration": "0:00",
+          "genre": "Classical"
+        },
+        {
+          "id": "03",
+          "title": "Piano Concerto No. 6",
+          "artist": "Beethoven",
+          "duration": "0:00",
+          "genre": "Classical"
+        }
+      ]
+    },
+    {
+      "id": "910e8324-d76b-46a3-a53e-042dccd3d5f8",
+      "title": "TEST!!!!",
+      "songs": [
+        {
+          "id": "44bc3db1-5bcd-4fc0-b35a-fdf4e3cbcb88",
+          "title": "test song",
+          "artist": "test artis",
+          "duration": 2
+        },
+        {
+          "id": "90926936-996f-4c2a-a7a2-6a5661e29f71",
+          "title": "asf",
+          "artist": "afssfa",
+          "duration": 2
+        }
+      ],
+      "duration": 7
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{{> menu}}
+
+<section class="ui center aligned middle aligned segment">
+  <h2 class="ui header">
+    {{playlist.title}}
+  </h2>
+  {{> listsongs}}
+  {{> addsong}}
+  
+  <section style="background-color:#F573A0;color:white;">
+        <h2>Search for a Track</h2>
+        <div id="search-track-container"></div>
+      </section>
+  
+  <section style="background-color:#509BF5;color:white;">
+        <h2>Get an Artist</h2>
+        <div id="artist-container"></div>
+      </section>
+</section>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>

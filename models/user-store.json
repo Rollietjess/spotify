@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "firstName": "homer",
+      "lastName": "simpson",
+      "email": "homer@simpson.com",
+      "password": "secret",
+      "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
+    },
+    {
+      "firstName": "marge",
+      "lastName": "simpson",
+      "email": "marge@simpson.com",
+      "password": "secret",
+      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
+    },
+    {
+      "firstName": "Rolinda",
+      "lastName": "Strijker",
+      "email": "r.olinda@live.nl",
+      "password": "test",
+      "id": "43a3ca11-14e4-4aeb-9085-e336a4d20566"
+    },
+    {
+      "firstName": "Mick",
+      "lastName": "Hutten",
+      "email": "MickHutten@gmail.com",
+      "password": "secret",
+      "id": "a8670d96-9328-41be-aaf8-228e479d4c1b"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "MickHutten@gmail.com",
+      "password": "secret",
+      "id": "9ff8136b-3f8e-4967-af35-5fa94e07c1fe"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{{> menu id="playlists"}}
+
+{{#each playlists}}
+  <section class="ui segment">
+    <h2 class="ui header">
+      {{title}}
+    </h2>
+    <p> Total Duration: {{duration}} </p>
+    <button class="ui labeled icon primary basic button" data-id="{{id}}" onclick="viewPlaylist(this)">
+      <i class="folder open icon"></i>
+      View
+    </button>
+    <button class="ui labeled icon negative basic button" data-id="{{id}}" onclick="deletePlaylist(this)">
+      <i class="trash icon"></i>
+      Delete
+    </button>
+  </section>
+{{/each}}
+
+<section class="ui segment">
+  {{> addplaylist}}
+</section>
+
+<script>
+  function viewPlaylist(e){
+    let playlistID = $(e).data('id');
+    location.href = "/playlist/" + playlistID;
+  }
+  
+  function deletePlaylist(e){
+    let playlistID = $(e).data('id');
+    location.href = "/playlists/deleteplaylist/" + playlistID;
+  }
+</script>

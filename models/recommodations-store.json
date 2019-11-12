@@ -1,0 +1,24 @@
+{
+  "recommodationCollection": [
+   {
+     "Artist": "Tones & I",
+     "Song": "Dance Monkey"
+   },
+   {
+     "Artist": "Regard",
+     "Song": "Ride It"
+   },
+   {
+     "Artist": "Harry Styles",
+     "Song": "Lights Up"
+   },
+   {
+     "Artist": "Post Malone",
+     "Song": "Circles"
+   },
+   {
+     "Artist": "Travis Scott",
+     "Song": "Highest in the room"
+   }
+  ]
+}

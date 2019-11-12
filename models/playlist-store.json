@@ -1,0 +1,93 @@
+{
+  "playlistCollection": [
+    {
+      "id": "0e873ca0-51e5-435f-82ec-325e25ac3886",
+      "title": "Homers First List",
+      "songs": []
+    },
+    {
+      "id": "dae86f64-e5b4-4eba-beb4-d56b8addbfb7",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "title": "Marge playlist",
+      "songs": [
+        {
+          "id": "9eabe139-a2bf-47a9-aa62-bee985dc1362",
+          "title": "test",
+          "artist": "test",
+          "duration": 12
+        }
+      ],
+      "duration": 12
+    },
+    {
+      "id": "0b98d0cb-265b-4e59-bbb9-09826b737fdf",
+      "userid": "43a3ca11-14e4-4aeb-9085-e336a4d20566",
+      "title": "Imagine Dragons",
+      "songs": [
+        {
+          "id": "2dd87b98-caa9-4cf7-90a4-8c692abcc9c3",
+          "title": "West Coast",
+          "artist": "Imagine Dragons",
+          "artistid": "53XhwfbYqKCa1cC15pYq2q",
+          "duration": 2
+        }
+      ],
+      "duration": 2
+    },
+    {
+      "id": "0b98d0cb-265b-4e59-bbb9-09826b737fd2",
+      "userid": "43a3ca11-14e4-4aeb-9085-e336a4d20566",
+      "title": "The Unlikely Candidates",
+      "songs": [
+        {
+          "id": "2dd87b98-caa9-4cf7-90a4-8c692abcc9c4",
+          "title": "Howl",
+          "artist": "The Unlikely Candidates",
+          "artistid": "4hwJwkgsufeilLXS1ZfJqq",
+          "duration": 2
+        }
+      ],
+      "duration": 2
+    },
+    {
+      "id": "c59250e9-5559-4729-a2b7-1673afeb7544",
+      "userid": "43a3ca11-14e4-4aeb-9085-e336a4d20566",
+      "title": "test",
+      "songs": [
+        {
+          "id": "be304320-a3bd-438a-8a22-b8f24bfc184c",
+          "title": "tasd",
+          "artist": "asdgadga",
+          "duration": 3
+        }
+      ],
+      "duration": 3
+    },
+    {
+      "id": "73685f09-a862-435c-8934-64c2fd51c6ae",
+      "userid": "a8670d96-9328-41be-aaf8-228e479d4c1b",
+      "title": "Beethoven Symphonies",
+      "songs": [
+        {
+          "id": "f6a8497d-53eb-497a-ac72-39c497e0d4a3",
+          "title": "Symphony No.5",
+          "artist": "Beethoven",
+          "duration": 5
+        },
+        {
+          "id": "31fabdf8-e8f1-476b-ba73-556ca8f5a1ac",
+          "title": "Symphony No.7",
+          "artist": "Beethoven",
+          "duration": 7
+        },
+        {
+          "id": "e853b85e-45a8-452f-a004-b778a3638853",
+          "title": "Symphony No.9",
+          "artist": "Beethoven",
+          "duration": 9
+        }
+      ],
+      "duration": 21
+    }
+  ]
+}
