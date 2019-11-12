@@ -50,20 +50,6 @@
       "duration": 2
     },
     {
-      "id": "c59250e9-5559-4729-a2b7-1673afeb7544",
-      "userid": "43a3ca11-14e4-4aeb-9085-e336a4d20566",
-      "title": "test",
-      "songs": [
-        {
-          "id": "be304320-a3bd-438a-8a22-b8f24bfc184c",
-          "title": "tasd",
-          "artist": "asdgadga",
-          "duration": 3
-        }
-      ],
-      "duration": 3
-    },
-    {
       "id": "73685f09-a862-435c-8934-64c2fd51c6ae",
       "userid": "a8670d96-9328-41be-aaf8-228e479d4c1b",
       "title": "Beethoven Symphonies",

@@ -29,55 +29,55 @@ const listener = app.listen(process.env.PORT || 4000, function () {
 
 
 // Initialize Spotify API wrapper
-var SpotifyWebApi = require('spotify-web-api-node');
+// var SpotifyWebApi = require('spotify-web-api-node');
 
-// The object we'll use to interact with the API
-var spotifyApi = new SpotifyWebApi({
-  clientId : process.env.CLIENT_ID,
-  clientSecret : process.env.CLIENT_SECRET
-});
+// // The object we'll use to interact with the API
+// var spotifyApi = new SpotifyWebApi({
+//   clientId : process.env.CLIENT_ID,
+//   clientSecret : process.env.CLIENT_SECRET
+// });
 
-// Using the Client Credentials auth flow, authenticate our app
-spotifyApi.clientCredentialsGrant()
-  .then(function(data) {
+// // Using the Client Credentials auth flow, authenticate our app
+// spotifyApi.clientCredentialsGrant()
+//   .then(function(data) {
   
-    // Save the access token so that it's used in future calls
-    spotifyApi.setAccessToken(data.body['access_token']);
-    console.log('Got an access token: ' + spotifyApi.getAccessToken());
+//     // Save the access token so that it's used in future calls
+//     spotifyApi.setAccessToken(data.body['access_token']);
+//     console.log('Got an access token: ' + spotifyApi.getAccessToken());
   
-  }, function(err) {
-    console.log('Something went wrong when retrieving an access token', err.message);
-  });
+//   }, function(err) {
+//     console.log('Something went wrong when retrieving an access token', err.message);
+//   });
 
 
-app.get('/search-track', function (request, response) {
-  // Search for a track!
-  spotifyApi.searchTracks('track:Anagram', {limit: 1})
-    .then(function(data) {
-    
-      // Send the first (only) track object
-      response.send(data.body.tracks.items[0]);
-    
-    }, function(err) {
-      console.error(err);
-    });
-});
-
-// app.get('/artist', function (request, response) {
-//   console.log(request.query)
-//     const artistId = request.query.artistID;
-  
-//     console.log("artist " + artistId);
-//   // Get information about an artist
-//   spotifyApi.getArtist(artistId)
+// app.get('/search-track', function (request, response) {
+//   // Search for a track!
+//   spotifyApi.searchTracks('track:Anagram', {limit: 1})
 //     .then(function(data) {
     
-//       // Send the list of tracks
-//       response.send(data.body);
+//       // Send the first (only) track object
+//       response.send(data.body.tracks.items[0]);
     
 //     }, function(err) {
 //       console.error(err);
 //     });
 // });
 
-module.exports = spotifyApi;
+// // app.get('/artist', function (request, response) {
+// //   console.log(request.query)
+// //     const artistId = request.query.artistID;
+  
+// //     console.log("artist " + artistId);
+// //   // Get information about an artist
+// //   spotifyApi.getArtist(artistId)
+// //     .then(function(data) {
+    
+// //       // Send the list of tracks
+// //       response.send(data.body);
+    
+// //     }, function(err) {
+// //       console.error(err);
+// //     });
+// // });
+
+// module.exports = spotifyApi;

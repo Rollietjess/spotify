@@ -6,6 +6,7 @@ const playlistStore = require('../models/playlist-store');
 
 const playlist = {
   index(request, response) {
+    console.log("tsasf");
     const playlistId = request.params.id;
     logger.debug('Playlist id = ', playlistId);
     const viewData = {

@@ -2,19 +2,7 @@
 
 <input type="hidden" id="artistID" name="artistID" value="{{artistId}}"/>
 <h1>
-  {{title}}
-  
-  {{artist}}
+  {{artist.name}}
 </h1>
 
-<section style="background-color:#509BF5;color:white;">
-        <h2>Get an Artist</h2>
-        <div id="artist-container"></div>
-      </section>
-
-
-    <!-- Your web-app is https, so your scripts need to be too -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
-    <script src="/client.js"></script>
+<img src="{{artist.images.[0].url}}">

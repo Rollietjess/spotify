@@ -17,12 +17,12 @@ router.get('/about', about.index);
 router.get('/playlist/:id', playlist.index);
 router.get('/playlist/:id/deletesong/:songid', playlist.deleteSong);
 router.get('/playlists/deleteplaylist/:id', playlists.deletePlaylist);
-// router.get('/', accounts.index);
+router.get('/', accounts.index);
 router.get('/login', accounts.login);
 router.get('/signup', accounts.signup);
 router.get('/logout', accounts.logout);
 router.get('/playlists', playlists.index);
-router.get('/', playlists.index);
+// router.get('/', playlists.index);
 router.get('/viewsong/:id', viewsong.index);
 router.get('/viewartist/:id', viewartist.index);
 
