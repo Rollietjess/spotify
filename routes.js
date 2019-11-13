@@ -9,7 +9,7 @@ const playlist = require('./controllers/playlist.js');
 const accounts = require('./controllers/accounts.js');
 const playlists = require('./controllers/playlists.js');
 const viewsong = require('./controllers/viewsong.js');
-const viewartist = require('./controllers/viewartist.js');
+const artist = require('./controllers/artist.js');
 
 // GET
 router.get('/dashboard', dashboard.index);
@@ -24,7 +24,7 @@ router.get('/logout', accounts.logout);
 router.get('/playlists', playlists.index);
 // router.get('/', playlists.index);
 router.get('/viewsong/:id', viewsong.index);
-router.get('/viewartist/:id', viewartist.index);
+router.get('/artist/:id', artist.index);
 
 // POST
 router.post('/playlist/:id/addsong', playlist.addSong);

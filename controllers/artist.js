@@ -6,7 +6,7 @@ const spotifyApi = require('../spotifyapi');
 
 
 
-const viewartist = {
+const artist = {
   index(request, response) {
     const artistId = request.params.id;
     let artistTopTracks = {};
@@ -38,7 +38,7 @@ const viewartist = {
                   artistTopTracks: artistTopTracks,
                   artistAlbums: artistAlbums
                 };
-                response.render('viewartist', viewData);
+                response.render('artist', viewData);
           })
         })
       })
@@ -49,4 +49,4 @@ const viewartist = {
   
 };
 
-module.exports = viewartist;
+module.exports = artist;
