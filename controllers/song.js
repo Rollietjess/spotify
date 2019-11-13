@@ -5,7 +5,7 @@ const logger = require('../utils/logger');
 
 const spotifyApi = require('../spotifyapi');
 
-const viewsong = {
+const song = {
   index(request, response) {
     const songId = request.params.id;
     let track = {};
@@ -15,10 +15,10 @@ const viewsong = {
     }).then(function(){
       console.log(track)
       const viewData = {
-        title: 'viewsong',
+        title: 'song',
         track: track
       };
-      response.render('viewsong', viewData);
+      response.render('song', viewData);
     })
     .catch(function(error) {
       console.error(error);
@@ -26,4 +26,4 @@ const viewsong = {
   },
 };
 
-module.exports = viewsong;
+module.exports = song;
