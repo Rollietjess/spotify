@@ -1,8 +1,64 @@
 {{> menu id="viewartist"}}
 
-<input type="hidden" id="artistID" name="artistID" value="{{artistId}}"/>
-<h1>
-  {{artist.name}}
-</h1>
+<div class="wrapper">
+  <div class="ui three column grid">
+    <div class="row">
+      <div class="six wide column">
+        <div class="card_body">
+          <div class="card_top">
+            <h3>
+              {{artist.name}}
+            </h3>
+          </div>
+          <div class="pd20px">
+              {{artist.genres}}
+            {{#each artist.tracks}}
+              <div class="card_option">{{name}}</div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
 
-<img src="{{artist.images.[0].url}}">
+      <div class="six wide column">
+        <div class="card_body">
+          <div class="card_top">
+            <h3>
+              Top tracks
+            </h3>
+          </div>
+
+            {{#each artistTopTracks.tracks}}
+              <div class="card_option"><a href="../viewsong/{{id}}">{{name}}</a> -- <a href="{{preview_url}}">Preview</a></div>
+            {{/each}}
+
+        </div>
+      </div>
+
+      <div class="four wide column">
+        <div class="card_body">
+          <img class="ui image artist_image" src="{{artist.images.[0].url}}">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve wide column">
+        <div class="card_body">
+          <div class="card_top">
+            <h3>Albums</h3>
+          </div>
+          {{#each artistAlbums.items}}
+            <div class="card_option"><a href="../album/{{id}}">{{name}} / {{release_date}}</a></div>
+          {{/each}}
+        </div>
+      </div>
+
+      <div class="four wide column">
+        <div class="card_body">
+          <div class="card_top">
+            <h3>Related artists?</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

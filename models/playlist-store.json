@@ -30,9 +30,15 @@
           "artist": "Imagine Dragons",
           "artistid": "53XhwfbYqKCa1cC15pYq2q",
           "duration": 2
+        },
+        {
+          "id": "502b4c37-05e0-429d-b567-5ecda58857e5",
+          "title": "Natural",
+          "artist": "Imagine Dragons",
+          "duration": 2
         }
       ],
-      "duration": 2
+      "duration": 4
     },
     {
       "id": "0b98d0cb-265b-4e59-bbb9-09826b737fd2",
