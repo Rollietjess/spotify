@@ -1,25 +1,26 @@
 {{> menu id="playlists"}}
+<div class="wrapper">
+  {{#each playlists}}
+    <section class="ui segment">
+      <h2 class="ui header">
+        {{title}}
+      </h2>
+      <p> Total Duration: {{duration}} </p>
+      <button class="ui labeled icon primary basic button" data-id="{{id}}" onclick="viewPlaylist(this)">
+        <i class="folder open icon"></i>
+        View
+      </button>
+      <button class="ui labeled icon negative basic button" data-id="{{id}}" onclick="deletePlaylist(this)">
+        <i class="trash icon"></i>
+        Delete
+      </button>
+    </section>
+  {{/each}}
 
-{{#each playlists}}
   <section class="ui segment">
-    <h2 class="ui header">
-      {{title}}
-    </h2>
-    <p> Total Duration: {{duration}} </p>
-    <button class="ui labeled icon primary basic button" data-id="{{id}}" onclick="viewPlaylist(this)">
-      <i class="folder open icon"></i>
-      View
-    </button>
-    <button class="ui labeled icon negative basic button" data-id="{{id}}" onclick="deletePlaylist(this)">
-      <i class="trash icon"></i>
-      Delete
-    </button>
+    {{> addplaylist}}
   </section>
-{{/each}}
-
-<section class="ui segment">
-  {{> addplaylist}}
-</section>
+</div>
 
 <script>
   function viewPlaylist(e){

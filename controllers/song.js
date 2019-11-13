@@ -13,6 +13,7 @@ const song = {
       .then(function(data) {
         track = data.body
     }).then(function(){
+      console.log("track:::")
       console.log(track)
       const viewData = {
         title: 'song',

@@ -25,20 +25,21 @@
       "title": "Imagine Dragons",
       "songs": [
         {
-          "id": "2dd87b98-caa9-4cf7-90a4-8c692abcc9c3",
-          "title": "West Coast",
+          "id": "3LlAyCYU26dvFZBDUIMb7a",
+          "title": "Demons",
           "artist": "Imagine Dragons",
           "artistid": "53XhwfbYqKCa1cC15pYq2q",
           "duration": 2
         },
         {
-          "id": "502b4c37-05e0-429d-b567-5ecda58857e5",
-          "title": "Natural",
+          "id": "2nkoWsTZa8LKPNGdjI5uxj",
+          "title": "West Coast",
           "artist": "Imagine Dragons",
-          "duration": 2
+          "artistid": "53XhwfbYqKCa1cC15pYq2q",
+          "duration": 3
         }
       ],
-      "duration": 4
+      "duration": 5
     },
     {
       "id": "0b98d0cb-265b-4e59-bbb9-09826b737fd2",
@@ -46,11 +47,11 @@
       "title": "The Unlikely Candidates",
       "songs": [
         {
-          "id": "2dd87b98-caa9-4cf7-90a4-8c692abcc9c4",
+          "id": "2FfpshPBmZaHNZnKEty4j1",
           "title": "Howl",
           "artist": "The Unlikely Candidates",
           "artistid": "4hwJwkgsufeilLXS1ZfJqq",
-          "duration": 2
+          "duration": 0
         }
       ],
       "duration": 2
@@ -80,6 +81,28 @@
         }
       ],
       "duration": 21
+    },
+    {
+      "id": "059b3945-1301-4912-931f-344719611712",
+      "userid": "43a3ca11-14e4-4aeb-9085-e336a4d20566",
+      "title": "Random",
+      "songs": [
+        {
+          "id": "3gRBq8PfyrNu2C5yKp5xVI",
+          "title": "Bear claws",
+          "artist": "the academic",
+          "artistid": "3VLf4DlBTN2ZRwygS3TNti",
+          "duration": 0
+        },
+        {
+          "id": "65Xiy9PpFRXjFmZLkOmcPB",
+          "title": "Numbers don't lie",
+          "artist": "The Mynabirds",
+          "artistid": "6wWT7zLNVgTHbRh17E0tTk",
+          "duration": 3
+        }
+      ],
+      "duration": 3
     }
   ]
 }
