@@ -55,3 +55,53 @@ h3 {
     padding: 10px 20px;
     border-bottom: 1px solid #c4c9cb;
 }
+
+.related{
+    width: calc(100% / 3 - 10px);
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.related img{
+    width: 100%;
+}
+.related:nth-child(3n){
+    margin-right: 0px;
+}
+.related_tekst{
+    position: absolute;
+}
+
+.ui.image.label.related_label>img {
+    width: 30px !important;
+}
+
+.ui.image.label.related_label {
+    width: 100% !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ui.image.label.related_label:hover {
+    background-color: #1DB954 !important;
+}
+
+.card_option a:hover {
+    color: #1DB954;
+}
+
+.flex_thing{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex_thing .icon {
+    color: #18202f !important;
+}
+
+.flex_thing .icon:hover {
+    color: #1DB954 !important;
+    cursor: pointer;
+}

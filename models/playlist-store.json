@@ -100,9 +100,30 @@
           "artist": "The Mynabirds",
           "artistid": "6wWT7zLNVgTHbRh17E0tTk",
           "duration": 3
+        },
+        {
+          "id": "1HNE2PX70ztbEl6MLxrpNL",
+          "title": "In Too Deep",
+          "artist": "Sum 41",
+          "artistid": "0qT79UgT5tY4yudH9VfsdT",
+          "duration": 0
+        },
+        {
+          "id": "52gbcP8Uumg34r2hxv24n1",
+          "title": "Gun In My Hand",
+          "artist": "Dorothy",
+          "artistid": "6IOvhXyk5edbA2DVaeP9Up",
+          "duration": 3
+        },
+        {
+          "id": "1z9kQ14XBSN0r2v6fx4IdG",
+          "title": "Diamonds",
+          "artist": "Rihanna",
+          "artistid": "5pKCCKE2ajJHZ9KAiaK11H",
+          "duration": 3
         }
       ],
-      "duration": 3
+      "duration": 9
     }
   ]
 }

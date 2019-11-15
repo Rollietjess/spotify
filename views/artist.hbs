@@ -23,12 +23,12 @@
         <div class="card_body">
           <div class="card_top">
             <h3>
-              Top tracks
+              Top Tracks
             </h3>
           </div>
 
             {{#each artistTopTracks.tracks}}
-              <div class="card_option"><a href="../song/{{id}}">{{name}}</a> -- <a href="{{preview_url}}">Preview</a></div>
+              <div class="card_option flex_thing"><a href="../song/{{id}}">{{name}}</a> {{#if preview_url}}<p data-url="{{preview_url}}" onclick="playSound(this)"><i class="play icon"></i></p>{{/if}}</div>
             {{/each}}
 
         </div>
@@ -41,7 +41,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="twelve wide column">
+      <div class="ten wide column">
         <div class="card_body">
           <div class="card_top">
             <h3>Albums</h3>
@@ -52,13 +52,34 @@
         </div>
       </div>
 
-      <div class="four wide column">
+      <div class="six wide column">
         <div class="card_body">
           <div class="card_top">
-            <h3>Related artists?</h3>
+            <h3>Related Artists</h3>
+          </div>
+          <div class="pd20px">
+            {{#each relatedArtists.artists}}
+              <div class="related">
+                <a href="../artist/{{id}}" class="ui image label related_label">
+                  <img src="{{images.[1].url}}">
+                  {{name}}
+                </a>
+              </div>
+            {{/each}}
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+function playSound(url) {
+  let preview = $(url).data('url');
+  console.log(url.children.style)
+  $(url.children).css("color", "#1DB954")
+  let a = new Audio(preview);
+  a.play();
+}
+
+</script>
