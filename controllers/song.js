@@ -21,6 +21,19 @@ const song = {
     }) ();
     
   },
+  
+  addPlaylist(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
+    const newPlayList = {
+      id: uuid(),
+      userid: loggedInUser.id,
+      title: request.body.title,
+      songs: [],
+    };
+    logger.debug('Creating a new Playlist', newPlayList);
+    playlistStore.addPlaylist(newPlayList);
+    response.redirect('/playlists');
+  },
 };
 
 module.exports = song;

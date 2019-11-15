@@ -31,7 +31,7 @@ const playlist = {
     let songId = "";
     let artistId = "";
 
-console.log(request.body.title)
+
     spotifyApi.searchTracks(request.body.title + " "+ request.body.artist, {limit: 1})
     .then(function(data) {
       songId = data.body.tracks.items[0].id

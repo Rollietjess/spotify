@@ -23,6 +23,14 @@ const spotifyStore = {
 
     getTrack(songId) {
         return spotifyApi.getTrack(songId).then(data => {return data.body } ).catch(function(error) { console.error(error); });
+    },
+
+    searchTracks(value) {
+        return spotifyApi.searchTracks(value).then(data => {return data.body.tracks.items } ).catch(function(error) { console.error(error); });
+    },
+
+    searchArtists(value) {
+        return spotifyApi.searchArtists(value).then(data => {return data.body.artists.items } ).catch(function(error) { console.error(error); });
     }
 };
 

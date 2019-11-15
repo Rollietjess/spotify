@@ -121,9 +121,23 @@
           "artist": "Rihanna",
           "artistid": "5pKCCKE2ajJHZ9KAiaK11H",
           "duration": 3
+        },
+        {
+          "id": "6SpLc7EXZIPpy0sVko0aoU",
+          "title": "Misery Business",
+          "artist": "Paramore",
+          "artistid": "74XFHRwlV6OrjEM0A2NCMF",
+          "duration": 4
+        },
+        {
+          "id": "0tV8pOpiNsKqUys0ilUcXz",
+          "title": "Rise Up",
+          "artist": "Andra Day",
+          "artistid": "1c4rxrxy8eDLvMVL1DTiBe",
+          "duration": 1
         }
       ],
-      "duration": 9
+      "duration": 14
     }
   ]
 }

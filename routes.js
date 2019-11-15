@@ -10,6 +10,7 @@ const accounts = require('./controllers/accounts.js');
 const playlists = require('./controllers/playlists.js');
 const song = require('./controllers/song.js');
 const artist = require('./controllers/artist.js');
+const search = require('./controllers/search.js');
 
 // GET
 router.get('/dashboard', dashboard.index);
@@ -25,11 +26,13 @@ router.get('/playlists', playlists.index);
 // router.get('/', playlists.index);
 router.get('/song/:id', song.index);
 router.get('/artist/:id', artist.index);
+router.get('/search', search.index);
 
 // POST
 router.post('/playlist/:id/addsong', playlist.addSong);
 router.post('/playlists/addplaylist', playlists.addPlaylist);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
+router.post('/search/result', search.result);
 
 module.exports = router;

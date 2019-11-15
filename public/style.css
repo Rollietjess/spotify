@@ -77,14 +77,14 @@ h3 {
     width: 30px !important;
 }
 
-.ui.image.label.related_label {
+.ui.image.label.related_label, .ui.label.related_label {
     width: 100% !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.ui.image.label.related_label:hover {
+.ui.image.label.related_label:hover, .ui.label.related_label:hover {
     background-color: #1DB954 !important;
 }
 
