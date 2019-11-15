@@ -1,8 +1,83 @@
 {{> menu id="viewsong"}}
 
 <div class="wrapper">
-  <h1>
-    {{track.name}} / {{track.artists.[0].name}}
-  </h1>
+  <div class="ui grid">
+    <div class="three column row">
+      <div class="column">
+        <div class="card_body">
+          <div class="card_top">
+            <h3>{{track.name}}</h3>
+          </div>
+          <div class="pd20px">
+            {{#each track.artists}}
+              <a href="../artist/{{id}}">{{name}}</a><br>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card_body">
+          <div class="card_top">
+            <h3>Album</h3>
+          </div>
+          <div class="pd20px flex_normal">
+            <div class="album_image">
+              <img class="ui small rounded image" src="{{track.album.images.[0].url}}">
+            </div>
+            <div class="album_info">
+              <p><a href="../album/{{track.album.id}}">{{track.album.name}}</a></p>
+              <p>{{track.album.release_date}}</p>
+              <p>{{track.album.total_tracks}} tracks</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card_body">
+          <div class="card_top">
+            <h3>Info</h3>
+          </div>
+          <div class="pd20px">
+            <span class="info_label">
+              Duration in ms
+            </span>
+            <p>{{track.duration_ms}}</p>
+            <span class="info_label">
+              Play on spotify
+            </span>
+            <p><a href="{{track.external_urls.spotify}}" target="_blank">Open web spotify</a></p>
+            {{#if track.preview_url}}<span class="info_label">
+              Play preview
+            </span>
+            <p><p data-url="{{track.preview_url}}" onclick="playSound(this)"><i class="play icon"></i></p></p>{{/if}}
+            <span class="info_label">
+              Add to playlist
+            </span>
+            <p><select>
+              {{#each playlists}}
+                <option>{{title}}</option>
+              {{/each}}
+            </select></p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
   
 </div>
+
+
+
+<script>
+function playSound(url) {
+  let preview = $(url).data('url');
+  console.log(url.children.style)
+  $(url.children).css("color", "#1DB954")
+  let a = new Audio(preview);
+  a.play();
+}
+
+</script>

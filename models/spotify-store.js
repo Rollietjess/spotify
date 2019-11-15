@@ -19,6 +19,10 @@ const spotifyStore = {
 
     getRelatedArtists(artistId) {
         return spotifyApi.getArtistRelatedArtists(artistId).then(data => {return data.body } ).catch(function(error) { console.error(error); });
+    },
+
+    getTrack(songId) {
+        return spotifyApi.getTrack(songId).then(data => {return data.body } ).catch(function(error) { console.error(error); });
     }
 };
 

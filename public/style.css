@@ -97,11 +97,24 @@ h3 {
     justify-content: space-between;
 }
 
+.flex_normal{
+    display: flex;
+}
+
+.album_info {
+    margin-left: 30px;
+}
+
 .flex_thing .icon {
     color: #18202f !important;
 }
 
-.flex_thing .icon:hover {
+.flex_thing .icon:hover, .pd20px .icon:hover {
     color: #1DB954 !important;
     cursor: pointer;
+}
+
+.info_label {
+    font-weight: 600;
+    display: block;
 }
