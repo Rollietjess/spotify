@@ -7,7 +7,9 @@
         </div>
         <div class="pd20px">
             <form action="/search/result" method="POST">
-                <input type="text" name="searchValue" id="searchValue"> 
+                <div class="ui input">
+                    <input type="text" name="searchValue" id="searchValue" placeholder="Search...."> 
+                </div>
                 <button class="ui blue submit button">Search</button>
             </form>
         </div>
@@ -22,7 +24,7 @@
                     <div class="pd20px">
                         {{#each tracks}}
                             <div class="related">
-                                <a href="../song/{{id}}" target="_blank" class="ui label related_label">
+                                <a href="../song/{{id}}" class="ui label related_label">
                                     <i class="music icon"></i>
                                     {{name}}
                                     <div class="detail">{{artists.[0].name}}</div>
@@ -40,7 +42,7 @@
                     <div class="pd20px">
                         {{#each artists}}
                             <div class="related">
-                                <a href="../artist/{{id}}" target="_blank" class="ui image label related_label">
+                                <a href="../artist/{{id}}" class="ui image label related_label">
                                     <img src="{{images.[1].url}}">
                                     {{name}}
                                 </a>

@@ -1,0 +1,65 @@
+{{> menu id="album"}}
+
+<div class="wrapper">
+  <div class="ui three column grid">
+    <div class="row">
+      <div class="six wide column">
+        <div class="card_body">
+          <div class="card_top">
+            <h3>
+              {{album.name}}
+            </h3>
+          </div>
+          <div class="pd20px">
+                <span class="info_label">
+                    Artists
+                </span>
+                {{#each album.artists}}
+                    <p><a href="/artist/{{id}}">{{name}}</a></p>
+                {{/each}}
+                <span class="info_label">
+                    Label
+                </span>
+                <p>{{album.label}}</p>
+                <span class="info_label">
+                    Release date
+                </span>
+                <p>{{album.release_date}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="six wide column">
+        <div class="card_body">
+          <div class="card_top">
+            <h3>
+              Tracks
+            </h3>
+          </div>
+
+            {{#each album.tracks.items}}
+              <div class="card_option flex_thing"><a href="../song/{{id}}">{{name}}</a> {{#if preview_url}}<p data-url="{{preview_url}}" onclick="playSound(this)"><i class="play icon"></i></p>{{/if}}</div>
+            {{/each}}
+
+        </div>
+      </div>
+
+      <div class="four wide column">
+        <div class="card_body">
+          <img class="ui image artist_image" src="{{album.images.[0].url}}">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function playSound(url) {
+  let preview = $(url).data('url');
+  console.log(url.children.style)
+  $(url.children).css("color", "#1DB954")
+  let a = new Audio(preview);
+  a.play();
+}
+
+</script>

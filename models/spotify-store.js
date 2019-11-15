@@ -31,6 +31,10 @@ const spotifyStore = {
 
     searchArtists(value) {
         return spotifyApi.searchArtists(value).then(data => {return data.body.artists.items } ).catch(function(error) { console.error(error); });
+    },
+
+    getAlbum(albumId) {
+        return spotifyApi.getAlbum(albumId).then(data => {return data.body } ).catch(function(error) { console.error(error); });
     }
 };
 
