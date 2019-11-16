@@ -79,4 +79,12 @@ function playSound(url) {
   a.play();
 }
 
+function stopSound(url) {
+  let preview = $(url).data('url');
+  console.log(url.children.style)
+  $(url.children).css("color", "#1DB954")
+  let a = new Audio(preview);
+  a.play();
+}
+
 </script>

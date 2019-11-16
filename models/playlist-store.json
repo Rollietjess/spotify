@@ -37,9 +37,16 @@
           "artist": "Imagine Dragons",
           "artistid": "53XhwfbYqKCa1cC15pYq2q",
           "duration": 3
+        },
+        {
+          "id": "6Ng999MKVY9ikd8FtGaNnz",
+          "title": "Polaroid",
+          "artist": "Imagine Dragons",
+          "artistid": "53XhwfbYqKCa1cC15pYq2q",
+          "duration": 2
         }
       ],
-      "duration": 5
+      "duration": 7
     },
     {
       "id": "0b98d0cb-265b-4e59-bbb9-09826b737fd2",
@@ -142,9 +149,16 @@
           "artist": "Coldplay",
           "artistid": "4gzpq5DPGxSnKTe4SA8HAU",
           "duration": 3
+        },
+        {
+          "id": "3gRBq8PfyrNu2C5yKp5xVI",
+          "title": "Bear claws",
+          "artist": "The Academic",
+          "artistid": "3VLf4DlBTN2ZRwygS3TNti",
+          "duration": 4
         }
       ],
-      "duration": 17
+      "duration": 21
     }
   ]
 }

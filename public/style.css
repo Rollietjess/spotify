@@ -7,7 +7,12 @@ body{
 }
 
 .menu {    
-    height: 100px !important;
+    height: 50px !important;
+    margin-bottom: 30px !important;
+}
+
+.ui.sticky.bound.top, .ui.sticky.fixed.top {
+    top:20px !important;
 }
 
 h3 {

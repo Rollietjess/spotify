@@ -2,6 +2,7 @@
 
 const _ = require('lodash');
 const spotifyApi = require('../spotifyapi');
+const lyricist = require('../geniusapi');
 
 const spotifyStore = {
 
@@ -35,6 +36,18 @@ const spotifyStore = {
 
     getAlbum(albumId) {
         return spotifyApi.getAlbum(albumId).then(data => {return data.body } ).catch(function(error) { console.error(error); });
+    },
+
+    getRecommendations(){
+        return spotifyApi.getRecommendations({limit: 10 ,market: "NL", seed_genres: ["indie", "rock"]} ).then(data => {return data.body } ).catch(function(error) { console.error(error); });
+    },
+
+    getGenius(song) {
+        return lyricist.song(song, { fetchLyrics: true, textFormat: 'html' }).then(song => {return song }).catch(function(error) { console.error(error); });
+    },
+    
+    getGeniusSearch(query) {
+        return lyricist.search(query, { page: 1 }).then(song => {return song }).catch(function(error) { console.error(error); });
     }
 };
 
