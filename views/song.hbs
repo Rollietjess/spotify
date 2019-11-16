@@ -60,11 +60,16 @@
               <input type="hidden" name="artistId" value="{{track.artists.[0].id}}"> 
               <input type="hidden" name="songName" value="{{track.name}}"> 
               <input type="hidden" name="songId" value="{{track.id}}"> 
-              <p><select name="playlist">
-                {{#each playlists}}
-                  <option value="{{id}}">{{title}}</option>
-                {{/each}}
-              </select> <button>Add to playlist</button></p>
+                <div class="ui action input">
+                  <select name="playlist" class="ui compact selection dropdown new_playlist">
+                    {{#each playlists}}
+                      <option value="{{id}}">{{title}}</option>
+                    {{/each}}
+                    <option disabled>──────────</option>
+                    <option value="new" data-songId="{{track.id}}" data-artistId="{{track.artists.[0].id}}" data-songname="{{track.name}}" data-artistname="{{track.artists.[0].name}}">New playlist</option>
+                  </select>
+                  <button class="ui button">Add to playlist</button>
+                </div>
             </form>
           </div>
         </div>
@@ -109,19 +114,58 @@
 
 
 <script>
-function playSound(url) {
-  let preview = $(url).data('url');
+  function playSound(url) {
+    let preview = $(url).data('url');
 
-  console.log(url.children.style)
-  $(url.children).css("color", "#1DB954")
-  let a = new Audio(preview);
-  a.play();
-}
+    console.log(url.children.style)
+    $(url.children).css("color", "#1DB954")
+    let a = new Audio(preview);
+    a.play();
+  }
 
-$('.ui.sticky')
+  $('.ui.sticky')
   .sticky({
     context: '#example1'
-  })
-;
+  });
 
+  $('.new_playlist').change(function() {
+    console.log($('option:selected', this).data('songid'))
+    var value = $(this).val();
+    
+    if(value == "new"){
+      $('.playlistSongId').val($('option:selected', this).data('songid'))
+      $('.playlistArtistId').val($('option:selected', this).data('artistid'))
+      $('.playlistSongName').val($('option:selected', this).data('songname'))
+      $('.playlistArtistName').val($('option:selected', this).data('artistname'))
+      $('.ui.modal').modal('show');
+    }
+  })  
 </script>
+
+
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Create new playlist
+  </div>
+    <div class="image content">
+      <div class="description">
+        <p>When creating this playlist the song will immediatly be added too.</p>
+      <form action="/playlist/addPlaylistSong" method="POST">
+        <input type="hidden" name="playlistSongId" class="playlistSongId">
+        <input type="hidden" name="playlistArtistId" class="playlistArtistId">
+        <input type="hidden" name="playlistSongName" class="playlistSongName">
+        <input type="hidden" name="playlistArtistName" class="playlistArtistName">
+        <div class="ui fluid icon input">
+          <input type="text" name="playlistTitle" placeholder="A very random playlist title">
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="ui black deny button">
+        Cancel
+      </div>
+      <button class="ui positive right labeled icon button">Create this playlist!<i class="checkmark icon"></i></button>
+    </form>
+  </div>
+</div>

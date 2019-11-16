@@ -8,7 +8,6 @@ const SpotifyStore = require('../models/spotify-store');
 
 const dashboard = {
   index(request, response) {
-    logger.info('dashboard rendering');
     let recom = {};
     const loggedInUser = accounts.getCurrentUser(request);
 
@@ -43,12 +42,11 @@ module.exports = dashboard;
 
 
 function createData(response, playlistStore, loggedInUser, recom){
-  console.log(playlistStore.getUserPlaylists(loggedInUser.id))
+  // console.log(playlistStore.getUserPlaylists(loggedInUser.id))
   const viewData = {
     title: 'Playlist Dashboard',
     playlists: playlistStore.getUserPlaylists(loggedInUser.id),
     recom: recom
   };
-  // logger.info('about to render', playlistStore.getAllPlaylists());
   response.render('dashboard', viewData);
 }

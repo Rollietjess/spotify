@@ -37,5 +37,6 @@ router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 router.post('/search/result', search.result);
 router.post('/song/addsong', song.addSong);
+router.post('/playlist/addPlaylistSong', playlist.addPlaylistSong);
 
 module.exports = router;

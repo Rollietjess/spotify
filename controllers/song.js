@@ -28,7 +28,6 @@ const song = {
   },
   
   addSong(request, response) { 
-    console.log(request.body.playlist)
     const playlistId = request.body.playlist;
     const loggedInUser = accounts.getCurrentUser(request);
 
@@ -58,57 +57,6 @@ const song = {
     } else {
       response.redirect('/song/' + request.body.songId); 
     }
-    
-    
-    // const playlist = playlistStore.getPlaylist(playlistId); 
-    // const loggedInUser = accounts.getCurrentUser(request);
-
-    // let songId = "";
-    // let artistId = "";
-
-
-    // spotifyApi.searchTracks(request.body.title + " "+ request.body.artist, {limit: 1})
-    // .then(function(data) {
-    //   songId = data.body.tracks.items[0].id
-    //   artistId = data.body.tracks.items[0].artists[0].id
-      
-    // }).then(function(){
-
-    //   const newSong = {
-    //     id: songId,
-    //     title: request.body.title,
-    //     artist: request.body.artist,
-    //     artistid: artistId,
-    //     duration: Number(request.body.duration),
-    //   };
-
-    //   const userPlaylists = playlistStore.getUserPlaylists(loggedInUser.id);
-    //   let boolSong = false;
-    //   userPlaylists.forEach(element => {
-    //     if(element.id == playlistId){
-    //       element.songs.forEach(song => {
-    //         if(song.id == songId){
-    //           boolSong = true;
-    //         }
-    //       });
-    //     }
-    //   });
-    //   const viewData = {
-    //     boolSong: boolSong
-    //   };
-    //   if(!boolSong){
-    //     playlistStore.addSong(playlistId, newSong); 
-    //     response.redirect('/playlist/' + playlistId); 
-    //   } else {
-    //     response.redirect('/playlist/' + playlistId); 
-    //   }
-        
-    // }).catch(function(error) {
-    //   console.error(error);
-    // });
-
-
-
   }
 };
 

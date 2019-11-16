@@ -55,6 +55,16 @@ h3 {
     border:none;
 }
 
+.ui.selection.dropdown {
+    padding: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.new_playlist option:last-child {
+    font-weight:bold;
+}
+
 .card_option {
     border-bottom: 1px solid #e9ebee;
     padding: 8px 20px;

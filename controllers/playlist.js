@@ -73,9 +73,50 @@ const playlist = {
     }).catch(function(error) {
       console.error(error);
     });
+  },
+
+  addPlaylistSong(request, response){
+    console.log(request.body)
+    const loggedInUser = accounts.getCurrentUser(request);
+    const playlistId = uuid();
+
+    const newPlayList = {
+      id: playlistId,
+      userid: loggedInUser.id,
+      title: request.body.playlistTitle,
+      songs: [],
+    };
+    playlistStore.addPlaylist(newPlayList);
+
+    const newSong = {
+      id: request.body.playlistSongId,
+      title: request.body.playlistSongName,
+      artist: request.body.playlistArtistName,
+      artistid: request.body.playlistArtistId,
+      duration: 0,
+    };
+
+    const userPlaylists = playlistStore.getUserPlaylists(loggedInUser.id);
+    let boolSong = false;
+    userPlaylists.forEach(element => {
+      if(element.id == playlistId){
+        element.songs.forEach(song => {
+          if(song.id == request.body.songId){
+            boolSong = true;
+          }
+        });
+      }
+    });
+
+    if(!boolSong){
+      playlistStore.addSong(playlistId, newSong); 
+      response.redirect('/playlist/' + playlistId); 
+    } else {
+      response.redirect('/dashboard/'); 
+    }
 
 
-
+    // response.redirect('/playlists');
   }
 };
 

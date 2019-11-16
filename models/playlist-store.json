@@ -44,6 +44,13 @@
           "artist": "Imagine Dragons",
           "artistid": "53XhwfbYqKCa1cC15pYq2q",
           "duration": 2
+        },
+        {
+          "id": "62yJjFtgkhUrXktIoSjgP2",
+          "title": "Radioactive",
+          "artist": "Imagine Dragons",
+          "artistid": "53XhwfbYqKCa1cC15pYq2q",
+          "duration": 0
         }
       ],
       "duration": 7
@@ -156,9 +163,38 @@
           "artist": "Wakey!Wakey!",
           "artistid": "6nwykPKe0s5K030p5lliIY",
           "duration": 0
+        },
+        {
+          "id": "6nTiIhLmQ3FWhvrGafw2zj",
+          "title": "American Idiot",
+          "artist": "Green Day",
+          "artistid": "7oPftvlwr6VrsViSDV7fJY",
+          "duration": 0
+        },
+        {
+          "id": "1E1uGhNdBe6Dddbgs2KqtZ",
+          "title": "Jumpsuit",
+          "artist": "Twenty One Pilots",
+          "artistid": "3YQKmKGau1PzlVlkL1iodx",
+          "duration": 0
         }
       ],
       "duration": 19
+    },
+    {
+      "id": "f8f4cb39-5298-493f-9726-56c3e8b5bf93",
+      "userid": "43a3ca11-14e4-4aeb-9085-e336a4d20566",
+      "title": "Random 2.0",
+      "songs": [
+        {
+          "id": "5EBvHC0SGFJDenBJafqOX4",
+          "title": "100 Letters",
+          "artist": "Halsey",
+          "artistid": "26VFTg2z8YR0cCuwLzESi2",
+          "duration": 0
+        }
+      ],
+      "duration": 0
     }
   ]
 }

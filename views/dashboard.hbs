@@ -6,12 +6,12 @@
       <h3>Recommodations</h3>
     </div>
     <div class="pd20px">
-      <table class="ui table">
+      <table class="ui basic table">
         <thead>
           <tr>
-            <th>Song</th>
-            <th>Artist</th>
-            <th></th>
+            <th class="five wide">Song</th>
+            <th class="six wide">Artist</th>
+            <th class="five wide"></th>
           </tr>
         </thead>
         <tbody>
@@ -24,11 +24,22 @@
                 <a href="../artist/{{./artists.[0].id}}">{{./artists.[0].name}}</a>
               </td>
               <td>
-                <select>
-                  {{#each ../playlists}}
-                    <option value="{{./id}}">{{./title}}</option>
-                  {{/each}}
-                </select> 
+                <form action="/song/addsong" method="POST">
+                  <input type="hidden" name="artistName" value="{{./artists.[0].name}}"> 
+                  <input type="hidden" name="artistId" value="{{./artists.[0].id}}"> 
+                  <input type="hidden" name="songName" value="{{./name}}"> 
+                  <input type="hidden" name="songId" value="{{./id}}"> 
+                  <div class="ui action input">
+                    <select name="playlist" class="ui compact selection dropdown new_playlist">
+                      {{#each ../playlists}}
+                        <option value="{{./id}}">{{./title}}</option>
+                      {{/each}}
+                      <option disabled>──────────</option>
+                      <option value="new" data-songId="{{./id}}" data-artistId="{{./artists.[0].id}}" data-songname="{{./name}}" data-artistname="{{./artists.[0].name}}">New playlist</option>
+                    </select>
+                    <div class="ui button">Add to playlist</div>
+                  </div>
+                </form>
               </td>
             </tr>
           {{/each}}
@@ -37,38 +48,45 @@
     </div>
   </div>
 </div>
-              <select>
-                  {{#each playlists}}
-                    <option value="{{this.id}}">{{this.title}}</option>
-                  {{/each}}
-                </select> 
 
 <script>
-  $('.ui.modal').modal('show');
+  $('.new_playlist').change(function() {
+    console.log($('option:selected', this).data('songid'))
+    var value = $(this).val();
+    
+    if(value == "new"){
+      $('.playlistSongId').val($('option:selected', this).data('songid'))
+      $('.playlistArtistId').val($('option:selected', this).data('artistid'))
+      $('.playlistSongName').val($('option:selected', this).data('songname'))
+      $('.playlistArtistName').val($('option:selected', this).data('artistname'))
+      $('.ui.modal').modal('show');
+    }
+  })  
 </script>
 
 <div class="ui modal">
   <i class="close icon"></i>
   <div class="header">
-    Profile Picture
+    Create new playlist
   </div>
-  <div class="image content">
-    <div class="ui medium image">
-      <img src="/images/avatar/large/chris.jpg">
+    <div class="image content">
+      <div class="description">
+        <p>When creating this playlist the song will immediatly be added too.</p>
+      <form action="/playlist/addPlaylistSong" method="POST">
+        <input type="hidden" name="playlistSongId" class="playlistSongId">
+        <input type="hidden" name="playlistArtistId" class="playlistArtistId">
+        <input type="hidden" name="playlistSongName" class="playlistSongName">
+        <input type="hidden" name="playlistArtistName" class="playlistArtistName">
+        <div class="ui fluid icon input">
+          <input type="text" name="playlistTitle" placeholder="A very random playlist title">
+        </div>
+      </div>
     </div>
-    <div class="description">
-      <div class="ui header">We've auto-chosen a profile image for you.</div>
-      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
-      <p>Is it okay to use this photo?</p>
-    </div>
-  </div>
-  <div class="actions">
-    <div class="ui black deny button">
-      Nope
-    </div>
-    <div class="ui positive right labeled icon button">
-      Yep, that's me
-      <i class="checkmark icon"></i>
-    </div>
+    <div class="actions">
+      <div class="ui black deny button">
+        Cancel
+      </div>
+      <button class="ui positive right labeled icon button">Create this playlist!<i class="checkmark icon"></i></button>
+    </form>
   </div>
 </div>
