@@ -54,6 +54,8 @@ function createData(response, track, loggedInUser, genius){
     }
   });
 
+  console.log(geniusYoutube)
+
   const viewData = {
     title: 'song',
     track: track,
