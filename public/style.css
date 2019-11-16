@@ -51,6 +51,10 @@ h3 {
     padding: 20px;
 }
 
+.pd20px iframe {
+    border:none;
+}
+
 .card_option {
     border-bottom: 1px solid #e9ebee;
     padding: 8px 20px;

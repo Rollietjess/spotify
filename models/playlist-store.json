@@ -95,25 +95,11 @@
       "title": "Random",
       "songs": [
         {
-          "id": "3gRBq8PfyrNu2C5yKp5xVI",
-          "title": "Bear claws",
-          "artist": "the academic",
-          "artistid": "3VLf4DlBTN2ZRwygS3TNti",
-          "duration": 0
-        },
-        {
           "id": "65Xiy9PpFRXjFmZLkOmcPB",
           "title": "Numbers don't lie",
           "artist": "The Mynabirds",
           "artistid": "6wWT7zLNVgTHbRh17E0tTk",
           "duration": 3
-        },
-        {
-          "id": "1HNE2PX70ztbEl6MLxrpNL",
-          "title": "In Too Deep",
-          "artist": "Sum 41",
-          "artistid": "0qT79UgT5tY4yudH9VfsdT",
-          "duration": 0
         },
         {
           "id": "52gbcP8Uumg34r2hxv24n1",
@@ -151,14 +137,21 @@
           "duration": 3
         },
         {
+          "id": "1HNE2PX70ztbEl6MLxrpNL",
+          "title": "In Too Deep",
+          "artist": "Sum 41",
+          "artistid": "0qT79UgT5tY4yudH9VfsdT",
+          "duration": 2
+        },
+        {
           "id": "3gRBq8PfyrNu2C5yKp5xVI",
           "title": "Bear claws",
-          "artist": "The Academic",
+          "artist": "the academic",
           "artistid": "3VLf4DlBTN2ZRwygS3TNti",
-          "duration": 4
+          "duration": 0
         }
       ],
-      "duration": 21
+      "duration": 19
     }
   ]
 }

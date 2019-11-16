@@ -4,6 +4,7 @@ const uuid = require('uuid');
 const logger = require('../utils/logger');
 const playlistStore = require('../models/playlist-store');
 const spotifyApi = require('../spotifyapi');
+const accounts = require ('./accounts.js');
 
 const playlist = {
   index(request, response) {
@@ -27,6 +28,7 @@ const playlist = {
   addSong(request, response) { 
     const playlistId = request.params.id; 
     const playlist = playlistStore.getPlaylist(playlistId); 
+    const loggedInUser = accounts.getCurrentUser(request);
 
     let songId = "";
     let artistId = "";
@@ -38,7 +40,7 @@ const playlist = {
       artistId = data.body.tracks.items[0].artists[0].id
       
     }).then(function(){
-      console.log(artistId)
+
       const newSong = {
         id: songId,
         title: request.body.title,
@@ -46,8 +48,28 @@ const playlist = {
         artistid: artistId,
         duration: Number(request.body.duration),
       };
-      playlistStore.addSong(playlistId, newSong); 
-      response.redirect('/playlist/' + playlistId); 
+
+      const userPlaylists = playlistStore.getUserPlaylists(loggedInUser.id);
+      let boolSong = false;
+      userPlaylists.forEach(element => {
+        if(element.id == playlistId){
+          element.songs.forEach(song => {
+            if(song.id == songId){
+              boolSong = true;
+            }
+          });
+        }
+      });
+      const viewData = {
+        boolSong: boolSong
+      };
+      if(!boolSong){
+        playlistStore.addSong(playlistId, newSong); 
+        response.redirect('/playlist/' + playlistId); 
+      } else {
+        response.redirect('/playlist/' + playlistId); 
+      }
+        
     }).catch(function(error) {
       console.error(error);
     });
