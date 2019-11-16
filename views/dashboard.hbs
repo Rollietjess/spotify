@@ -18,15 +18,15 @@
           {{#each recom.tracks}}
             <tr>
               <td>
-                <a href="../song/{{id}}">{{name}}</a>
+                <a href="../song/{{./id}}">{{./name}}</a>
               </td>
               <td>
-                <a href="../artist/{{artists.[0].id}}">{{artists.[0].name}}</a>
+                <a href="../artist/{{./artists.[0].id}}">{{./artists.[0].name}}</a>
               </td>
               <td>
                 <select>
-                  {{#each playlists}}
-                    <option>{{title}}</option>
+                  {{#each ../playlists}}
+                    <option value="{{./id}}">{{./title}}</option>
                   {{/each}}
                 </select> 
               </td>
@@ -37,7 +37,11 @@
     </div>
   </div>
 </div>
-
+              <select>
+                  {{#each playlists}}
+                    <option value="{{this.id}}">{{this.title}}</option>
+                  {{/each}}
+                </select> 
 
 <script>
   $('.ui.modal').modal('show');

@@ -55,11 +55,17 @@
             <span class="info_label">
               Add to playlist
             </span>
-            <p><select>
-              {{#each playlists}}
-                <option>{{title}}</option>
-              {{/each}}
-            </select> <button>Addd to playlist</button></p>
+            <form action="/song/addsong" method="POST">
+              <input type="hidden" name="artistName" value="{{track.artists.[0].name}}"> 
+              <input type="hidden" name="artistId" value="{{track.artists.[0].id}}"> 
+              <input type="hidden" name="songName" value="{{track.name}}"> 
+              <input type="hidden" name="songId" value="{{track.id}}"> 
+              <p><select name="playlist">
+                {{#each playlists}}
+                  <option value="{{id}}">{{title}}</option>
+                {{/each}}
+              </select> <button>Add to playlist</button></p>
+            </form>
           </div>
         </div>
       </div>
@@ -99,10 +105,6 @@
       </div>
     </div>
   </div>
-  <div class="card_body">
-    
-  </div>
-
 </div>
 
 

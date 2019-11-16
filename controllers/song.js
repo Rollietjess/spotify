@@ -27,18 +27,89 @@ const song = {
     
   },
   
-  addPlaylist(request, response) {
+  addSong(request, response) { 
+    console.log(request.body.playlist)
+    const playlistId = request.body.playlist;
     const loggedInUser = accounts.getCurrentUser(request);
-    const newPlayList = {
-      id: uuid(),
-      userid: loggedInUser.id,
-      title: request.body.title,
-      songs: [],
+
+    const newSong = {
+      id: request.body.songId,
+      title: request.body.songName,
+      artist: request.body.artistName,
+      artistid: request.body.artistId,
+      duration: 0,
     };
-    logger.debug('Creating a new Playlist', newPlayList);
-    playlistStore.addPlaylist(newPlayList);
-    response.redirect('/playlists');
-  },
+
+    const userPlaylists = playlistStore.getUserPlaylists(loggedInUser.id);
+    let boolSong = false;
+    userPlaylists.forEach(element => {
+      if(element.id == playlistId){
+        element.songs.forEach(song => {
+          if(song.id == request.body.songId){
+            boolSong = true;
+          }
+        });
+      }
+    });
+
+    if(!boolSong){
+      playlistStore.addSong(playlistId, newSong); 
+      response.redirect('/playlist/' + playlistId); 
+    } else {
+      response.redirect('/song/' + request.body.songId); 
+    }
+    
+    
+    // const playlist = playlistStore.getPlaylist(playlistId); 
+    // const loggedInUser = accounts.getCurrentUser(request);
+
+    // let songId = "";
+    // let artistId = "";
+
+
+    // spotifyApi.searchTracks(request.body.title + " "+ request.body.artist, {limit: 1})
+    // .then(function(data) {
+    //   songId = data.body.tracks.items[0].id
+    //   artistId = data.body.tracks.items[0].artists[0].id
+      
+    // }).then(function(){
+
+    //   const newSong = {
+    //     id: songId,
+    //     title: request.body.title,
+    //     artist: request.body.artist,
+    //     artistid: artistId,
+    //     duration: Number(request.body.duration),
+    //   };
+
+    //   const userPlaylists = playlistStore.getUserPlaylists(loggedInUser.id);
+    //   let boolSong = false;
+    //   userPlaylists.forEach(element => {
+    //     if(element.id == playlistId){
+    //       element.songs.forEach(song => {
+    //         if(song.id == songId){
+    //           boolSong = true;
+    //         }
+    //       });
+    //     }
+    //   });
+    //   const viewData = {
+    //     boolSong: boolSong
+    //   };
+    //   if(!boolSong){
+    //     playlistStore.addSong(playlistId, newSong); 
+    //     response.redirect('/playlist/' + playlistId); 
+    //   } else {
+    //     response.redirect('/playlist/' + playlistId); 
+    //   }
+        
+    // }).catch(function(error) {
+    //   console.error(error);
+    // });
+
+
+
+  }
 };
 
 module.exports = song;
@@ -53,8 +124,6 @@ function createData(response, track, loggedInUser, genius){
       geniusYoutube = element.url.replace("watch?v=", "embed/");
     }
   });
-
-  console.log(geniusYoutube)
 
   const viewData = {
     title: 'song',

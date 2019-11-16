@@ -39,7 +39,7 @@ const spotifyStore = {
     },
 
     getRecommendations(){
-        return spotifyApi.getRecommendations({limit: 10 ,market: "NL", seed_genres: ["indie", "rock"]} ).then(data => {return data.body } ).catch(function(error) { console.error(error); });
+        return spotifyApi.getRecommendations({limit: 10 ,market: "NL", seed_genres: ["indie", "rock", "pop"]} ).then(data => {return data.body } ).catch(function(error) { console.error(error); });
     },
 
     getGenius(song) {
