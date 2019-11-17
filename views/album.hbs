@@ -54,12 +54,22 @@
 </div>
 
 <script>
-function playSound(url) {
-  let preview = $(url).data('url');
-  console.log(url.children.style)
-  $(url.children).css("color", "#1DB954")
-  let a = new Audio(preview);
-  a.play();
-}
+  let preview = "";
+  let a = new Audio();
+
+  function playSound(url) {
+    a.pause();
+    a.currentTime = 0;
+    
+    preview = $(url).data('url');
+
+    $( ".flex_thing .icon" ).each(function( index ) {
+      $(this).css("color", "#18202f");
+    });
+
+    $(url.children, this).css("color", "#1DB954")
+    a = new Audio(preview);
+    a.play();
+  }
 
 </script>

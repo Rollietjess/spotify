@@ -117,7 +117,6 @@
   function playSound(url) {
     let preview = $(url).data('url');
 
-    console.log(url.children.style)
     $(url.children).css("color", "#1DB954")
     let a = new Audio(preview);
     a.play();
@@ -129,7 +128,6 @@
   });
 
   $('.new_playlist').change(function() {
-    console.log($('option:selected', this).data('songid'))
     var value = $(this).val();
     
     if(value == "new"){
