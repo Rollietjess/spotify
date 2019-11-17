@@ -12,6 +12,7 @@ const song = require('./controllers/song.js');
 const artist = require('./controllers/artist.js');
 const search = require('./controllers/search.js');
 const album = require('./controllers/album.js');
+const spotify = require('./controllers/spotify.js');
 
 // GET
 router.get('/dashboard', dashboard.index);
@@ -29,6 +30,7 @@ router.get('/song/:id', song.index);
 router.get('/artist/:id', artist.index);
 router.get('/search', search.index);
 router.get('/album/:id', album.index);
+router.get('/spotify', spotify.index);
 
 // POST
 router.post('/playlist/:id/addsong', playlist.addSong);

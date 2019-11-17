@@ -19,7 +19,6 @@ const dashboard = {
   },
   
   deletePlaylist(request, response) {
-    logger.debug(`Delete playlist ${request.params.id}`);
     playlistStore.removePlaylist(request.params.id);
     response.redirect('/dashboard/');
   },
@@ -32,7 +31,6 @@ const dashboard = {
       title: request.body.title,
       songs: [],
     };
-    logger.debug('Creating a new Playlist', newPlayList);
     playlistStore.addPlaylist(newPlayList);
     response.redirect('/dashboard');
   },
@@ -42,7 +40,7 @@ module.exports = dashboard;
 
 
 function createData(response, playlistStore, loggedInUser, recom){
-  // console.log(playlistStore.getUserPlaylists(loggedInUser.id))
+
   const viewData = {
     title: 'Playlist Dashboard',
     playlists: playlistStore.getUserPlaylists(loggedInUser.id),

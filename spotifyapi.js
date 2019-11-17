@@ -3,13 +3,14 @@ dotenv.config();
 
 var SpotifyWebApi = require('spotify-web-api-node');
 
+let redirectUri = 'http://localhost:4000/spotify'
+
 // The object we'll use to interact with the API
 var spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET
+  clientSecret: process.env.CLIENT_SECRET,
+  redirectUri: redirectUri,
 });
-
-// console.log(spotifyApi);
 
 // Using the Client Credentials auth flow, authenticate our app
 spotifyApi.clientCredentialsGrant()
