@@ -125,7 +125,7 @@ h3 {
 }
 
 .flex_thing .icon {
-    color: #18202f !important;
+    color: #18202f;
 }
 
 .flex_thing .icon:hover, .pd20px .icon:hover {
