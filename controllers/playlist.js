@@ -9,11 +9,17 @@ const accounts = require ('./accounts.js');
 const playlist = {
   index(request, response) {
     const playlistId = request.params.id;
+    const error = request.cookies.error;
+    const success = request.cookies.success;
     logger.debug('Playlist id = ', playlistId);
     const viewData = {
       title: 'Playlist',
       playlist: playlistStore.getPlaylist(playlistId),
+      error: error,
+      success: success
     };
+    response.cookie('success', "");
+    response.cookie('error', "");
     response.render('playlist', viewData);
   },
   
@@ -65,8 +71,10 @@ const playlist = {
       };
       if(!boolSong){
         playlistStore.addSong(playlistId, newSong); 
+        response.cookie('success', "new_song");
         response.redirect('/playlist/' + playlistId); 
       } else {
+        response.cookie('error', "duplicate_song");
         response.redirect('/playlist/' + playlistId); 
       }
         

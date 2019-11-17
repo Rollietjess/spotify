@@ -2,7 +2,6 @@
 
 <div class="wrapper">
   <div class="card_body">
-    {{!-- <section class="ui center aligned middle aligned segment"> --}}
       <div class="card_top">
         <h2 class="ui header">
           {{playlist.title}}
@@ -12,15 +11,29 @@
         {{> listsongs}}
         {{> addsong}}
       </div>
-    {{!-- </section> --}}
   </div>
-  <div class="ui negative message">
-    <i class="close icon"></i>
-    <div class="header">
-      We're sorry we can't apply that discount
-    </div>
-    <p>That offer has expired
-  </p></div>
 
-  {{boolSong}}
+  {{#if error}}
+    <div class="ui negative message">
+      <i class="close icon"></i>
+      <p>This song already exist in this playlist!!</p>
+    </div>
+  {{/if}}
+  {{#if success}}
+    <div class="ui positive message">
+      <i class="close icon"></i>
+      <p>Song successfully added to this playlist!</p>
+    </div>
+  {{/if}}
 </div>
+
+
+<script>
+  $('.message .close')
+  .on('click', function() {
+    $(this)
+      .closest('.message')
+      .transition('fade')
+    ;
+  });
+</script>

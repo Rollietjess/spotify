@@ -120,6 +120,12 @@ h3 {
     display: flex;
 }
 
+.ui.negative.message, .ui.positive.message {
+    position: fixed !important;
+    left: 0 !important;
+    top: 100px;
+}
+
 .album_info {
     margin-left: 30px;
 }
