@@ -37,7 +37,7 @@
                       <option disabled>──────────</option>
                       <option value="new" data-songId="{{./id}}" data-artistId="{{./artists.[0].id}}" data-songname="{{./name}}" data-artistname="{{./artists.[0].name}}">New playlist</option>
                     </select>
-                    <div class="ui button">Add to playlist</div>
+                    <button class="ui button">Add to playlist</button>
                   </div>
                 </form>
               </td>
@@ -90,3 +90,10 @@
     </form>
   </div>
 </div>
+
+{{#if error}}
+  <div class="ui negative message">
+    <i class="close icon"></i>
+    <p>This song already exist in this playlist!!</p>
+  </div>
+{{/if}}

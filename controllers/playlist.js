@@ -66,9 +66,7 @@ const playlist = {
           });
         }
       });
-      const viewData = {
-        boolSong: boolSong
-      };
+
       if(!boolSong){
         playlistStore.addSong(playlistId, newSong); 
         response.cookie('success', "new_song");
